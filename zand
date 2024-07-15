@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text Display Example</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        padding: 0;
+    }
+    textarea {
+        width: 100%;
+        height: 100px;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        resize: vertical;
+    }
+    #output {
+        margin-top: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        min-height: 50px;
+    }
+</style>
+</head>
+<body>
+    <h2>Text Display Example</h2>
+    <textarea id="inputText" placeholder="Type something..." oninput="displayText(this.value)"></textarea>
+    <div id="output"></div>
+
+    <script>
+        function displayText(text) {
+            var outputElement = document.getElementById('output');
+            outputElement.textContent = text;
+        }
+    </script>
+</body>
+</html>
